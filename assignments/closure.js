@@ -32,19 +32,6 @@ console.log(counter());
 // ==== Challenge 3: Create a counter function with an object that can increment and decrement ====
 // const counterFactory = ((num) => {
   
-//   return {
-//     increment: () => {
-//       return ++num;
-//     },
-//     decrement: () => {
-//       return --num;
-//     },
-//     result: () => {
-//       return num;
-//     }
-//   }
-// })(0);
-
 const counterFactory = () => {
   let count = 0
 
