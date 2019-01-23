@@ -120,4 +120,11 @@ const byDonationSize = runners.map(runner => {return {donation:runner.donation, 
 
 console.log(byDonationSize);
 
-// Problem 3 New array with first_name, last_name
+// Problem 3 Average donation size
+
+let totalDonations = runners.reduce(function(totalDonations, currentValue){
+  return totalDonations + currentValue["donation"];
+}, 0);
+let averageDonation = totalDonations / runners.length;
+
+console.log(averageDonation);
