@@ -96,8 +96,28 @@ console.log(ticketPriceTotal);
 // I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  
 // Try to create and then solve 3 unique problems using one or many of the array methods listed above.
 
-// Problem 1
+// Problem 1: Alphabetize by last name.
+let alphabatized = runners.map(function(currentValue) {
+  return currentValue;
+ }).sort(function(a,b) {
+   if (a.last_name > b.last_name) {
+     return 1;
+   } else if (a.last_name < b.last_name) {
+     return -1
+   } else {
+     return 0;
+   }
+ });
+ console.log(alphabatized);
 
-// Problem 2
 
-// Problem 3
+// console.log(alphabatized);
+
+// // Problem 2: New array with donation, first & last name ONLY, and sorted by donation size.
+
+const byDonationSize = runners.map(runner => {return {donation:runner.donation, first_name:runner.first_name, last_name:runner.last_name}})
+.sort((a,b) => a["donation"] - b["donation"]).reverse();
+
+console.log(byDonationSize);
+
+// Problem 3 New array with first_name, last_name
